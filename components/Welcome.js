@@ -46,7 +46,7 @@ export default function Welcome({ onContinue }) {
           </div>
           <div className="flex gap-3">
             <span className="text-gray-400 font-mono text-xs mt-0.5 w-5 shrink-0">2.</span>
-            <span>6 Gespräche mit KI-Companions, jeweils ca. 5 Minuten, mit kurzem Fragebogen nach jedem Gespräch <span className="text-gray-400">(ca. 50 Min)</span></span>
+            <span>6 Gespräche mit KI-Companions, jeweils ca. 5 Minuten, mit kurzem Fragebogen nach jedem Gespräch <span className="text-gray-400">(ca. 40 Min)</span></span>
           </div>
           <div className="flex gap-3">
             <span className="text-gray-400 font-mono text-xs mt-0.5 w-5 shrink-0">3.</span>
@@ -57,18 +57,18 @@ export default function Welcome({ onContinue }) {
             <span>Abschlussfragebogen <span className="text-gray-400">(ca. 10 Min)</span></span>
           </div>
         </div>
-        <p className="text-xs text-gray-400 mt-3">Gesamtdauer: ca. 70\u201380 Minuten</p>
+        <p className="text-xs text-gray-400 mt-3">Gesamtdauer: ca. 60 Minuten</p>
       </div>
 
       {/* Technical requirements */}
       <div className="bg-blue-50 rounded-lg p-5 mb-6">
         <p className="text-sm font-semibold text-blue-900 mb-2">Bevor du startest</p>
         <div className="space-y-1.5 text-sm text-blue-800">
-          <p>\u2022 Stelle sicher, dass dein <strong>Mikrofon aktiviert</strong> ist und funktioniert.</p>
-          <p>\u2022 Verwende am besten <strong>Kopfhörer</strong>, um Rückkopplungen zu vermeiden.</p>
-          <p>\u2022 Sorge für eine <strong>ruhige Umgebung</strong> ohne Hintergrundgeräusche.</p>
-          <p>\u2022 Sprich bitte auf <strong>Hochdeutsch</strong> (nicht Schweizerdeutsch).</p>
-          <p>\u2022 Verwende idealerweise <strong>Google Chrome</strong> als Browser.</p>
+          <p>- Stelle sicher, dass dein <strong>Mikrofon aktiviert</strong> ist und funktioniert.</p>
+          <p>- Verwende am besten <strong>Kopfhörer</strong>, um Rückkopplungen zu vermeiden.</p>
+          <p>- Sorge für eine <strong>ruhige Umgebung</strong> ohne Hintergrundgeräusche.</p>
+          <p>- Sprich bitte auf <strong>Hochdeutsch</strong> (nicht Schweizerdeutsch).</p>
+          <p>- Verwende wenn möglich <strong>Google Chrome</strong> als Browser (andere Browser gehen auch).</p>
         </div>
       </div>
 

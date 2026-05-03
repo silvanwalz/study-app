@@ -140,7 +140,7 @@ export default function PreQuestionnaire({ onSubmit }) {
               value={demo.age}
               onChange={function (e) { setDemo(Object.assign({}, demo, { age: e.target.value })); }}
               className="border rounded px-3 py-2 w-full"
-              placeholder="18\u201329"
+              placeholder="18 - 29"
             />
           </div>
 
@@ -209,9 +209,9 @@ export default function PreQuestionnaire({ onSubmit }) {
                   className="border rounded px-3 py-2 w-full"
                 >
                   <option value="">Bitte wählen</option>
-                  <option value="1-2">1.\u20132. Semester</option>
-                  <option value="3-4">3.\u20134. Semester</option>
-                  <option value="5-6">5.\u20136. Semester</option>
+                  <option value="1-2">1. - 2. Semester</option>
+                  <option value="3-4">3. - 4. Semester</option>
+                  <option value="5-6">5. - 6. Semester</option>
                   <option value="7+">7. Semester oder höher</option>
                 </select>
               </div>

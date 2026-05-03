@@ -91,7 +91,7 @@ export default function TrustQuestionnaire({ persona, scenario, interactionIndex
         <strong>{scenario === "PFLEGE" ? "Pflege-Dilemma" : "Triage-Dilemma"}</strong> gesprochen.
         Bitte bewerte die folgenden Aussagen.
       </p>
-      <p className="text-xs text-gray-400 mb-6">1 = Trifft überhaupt nicht zu \u2014 7 = Trifft voll zu</p>
+      <p className="text-xs text-gray-400 mb-6">1 = Trifft überhaupt nicht zu - 7 = Trifft voll zu</p>
 
       {ALL_ITEMS.map(function (item) {
         return (

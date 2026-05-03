@@ -326,7 +326,7 @@ export default function BotInteraction({
       {/* Time warning banner */}
       {isConnected && timeLeft <= 30 && timeLeft > 0 && (
         <div className="bg-orange-100 border border-orange-300 text-orange-700 px-4 py-2 rounded-lg mb-4 text-sm">
-          Das Gespräch endet in K\u00FCrze.
+          Das Gespräch endet in Kürze.
         </div>
       )}
 

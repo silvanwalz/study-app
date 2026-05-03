@@ -3,7 +3,7 @@
 export default function Debriefing({ participantId }) {
   return (
     <div className="max-w-xl mx-auto text-center">
-      <div className="text-4xl mb-4">\u2705</div>
+      <div className="text-4xl mb-4">Die Studie ist nun zu Ende.</div>
       <h2 className="text-2xl font-bold mb-4">Vielen Dank für deine Teilnahme!</h2>
 
       <div className="text-left bg-gray-50 rounded-lg p-6 mb-6 text-sm text-gray-700 leading-relaxed space-y-3">
@@ -26,8 +26,8 @@ export default function Debriefing({ participantId }) {
       </div>
 
       <div className="bg-blue-50 rounded-lg p-4 mb-6 text-sm text-blue-800">
-        <p className="font-medium mb-1">Fragen zur Studie?</p>
-        <p>[Name und Kontaktdaten der Studienleitung einfügen]</p>
+        <p className="font-medium mb-1">Hast du Fragen zur Studie? Dann wende dich bitte an die Studienleitung:</p>
+        <p>Silvan Walz (walzsil1@students.zhaw.ch)</p>
       </div>
 
       <p className="text-xs text-gray-400">
