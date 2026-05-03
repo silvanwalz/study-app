@@ -31,7 +31,7 @@ export default function Welcome({ onContinue }) {
         <p>
           Es gibt zwei Szenarien (Dilemmata), die du im Laufe der Studie mehrfach mit
           unterschiedlichen Bots besprichst. Du wirst die Szenarien also wiederholt lesen,
-          das Gespräch dazu führt du aber jeweils mit einem anderen Bot. Insgesamt führst
+          das Gespräch dazu führst du aber jeweils mit einem anderen Bot. Insgesamt führst
           du sechs Gespräche.
         </p>
       </div>
@@ -68,7 +68,6 @@ export default function Welcome({ onContinue }) {
           <p>- Verwende am besten <strong>Kopfhörer</strong>, um Rückkopplungen zu vermeiden.</p>
           <p>- Sorge für eine <strong>ruhige Umgebung</strong> ohne Hintergrundgeräusche.</p>
           <p>- Sprich bitte auf <strong>Hochdeutsch</strong> (nicht Schweizerdeutsch).</p>
-          <p>- Verwende wenn möglich <strong>Google Chrome</strong> als Browser (andere Browser gehen auch).</p>
         </div>
       </div>
 
