@@ -9,6 +9,7 @@ var S_TIAS_ITEMS = [
 ];
 
 // TPA Distrust Subscale (Jian et al. 2000, two-factor model per Scharowski et al. 2025)
+// Deutsche Übersetzung adaptiert nach Pöhler et al. 2016
 var TPA_DISTRUST_ITEMS = [
   { id: "D1", text: "Der Bot war täuschend." },
   { id: "D2", text: "Der Bot hat sich hinterhältig verhalten." },
@@ -17,14 +18,25 @@ var TPA_DISTRUST_ITEMS = [
   { id: "D5", text: "Die Aussagen des Bots könnten schädliche Folgen haben." },
 ];
 
-// Study-specific ad-hoc items (not from a validated scale)
+// Studienspezifische Items zur Beratungsqualität (theoretisch fundiert nach Mayer et al. 1995)
 var QUALITY_ITEMS = [
   { id: "Q1", text: "Der Bot hat mir geholfen, das Dilemma aus verschiedenen Perspektiven zu betrachten." },
   { id: "Q2", text: "Ich habe mich vom Bot verstanden gefühlt." },
   { id: "Q3", text: "Der Bot hat mich zum Nachdenken gebracht." },
 ];
 
-var ALL_ITEMS = S_TIAS_ITEMS.concat(TPA_DISTRUST_ITEMS).concat(QUALITY_ITEMS);
+// Authentizitäts-Items nach Moulard, Garrity & Rice (2015), übertragen in den KI-Kontext
+// (Lee 2024; Sun & Wang 2026)
+var AUTHENTICITY_ITEMS = [
+  { id: "A1", text: "Der Bot wirkte authentisch." },
+  { id: "A2", text: "Der Bot wirkte echt auf mich." },
+  { id: "A3", text: "Der Bot wirkte aufrichtig." },
+];
+
+var ALL_ITEMS = S_TIAS_ITEMS
+  .concat(TPA_DISTRUST_ITEMS)
+  .concat(QUALITY_ITEMS)
+  .concat(AUTHENTICITY_ITEMS);
 
 export default function TrustQuestionnaire({ persona, scenario, interactionIndex, onSubmit }) {
   var [responses, setResponses] = useState({});
@@ -45,6 +57,9 @@ export default function TrustQuestionnaire({ persona, scenario, interactionIndex
     var distrustScore =
       TPA_DISTRUST_ITEMS.map(function (item) { return responses[item.id]; }).reduce(function (a, b) { return a + b; }, 0) /
       TPA_DISTRUST_ITEMS.length;
+    var authenticityScore =
+      AUTHENTICITY_ITEMS.map(function (item) { return responses[item.id]; }).reduce(function (a, b) { return a + b; }, 0) /
+      AUTHENTICITY_ITEMS.length;
 
     onSubmit({
       persona: persona,
@@ -53,6 +68,7 @@ export default function TrustQuestionnaire({ persona, scenario, interactionIndex
       responses: responses,
       trustScore: Math.round(trustScore * 100) / 100,
       distrustScore: Math.round(distrustScore * 100) / 100,
+      authenticityScore: Math.round(authenticityScore * 100) / 100,
       timestamp: new Date().toISOString(),
     });
   };
@@ -91,7 +107,7 @@ export default function TrustQuestionnaire({ persona, scenario, interactionIndex
         <strong>{scenario === "PFLEGE" ? "Pflege-Dilemma" : "Triage-Dilemma"}</strong> gesprochen.
         Bitte bewerte die folgenden Aussagen.
       </p>
-      <p className="text-xs text-gray-400 mb-6">1 = Trifft überhaupt nicht zu - 7 = Trifft voll zu</p>
+      <p className="text-xs text-gray-400 mb-6">1 = Trifft überhaupt nicht zu — 7 = Trifft voll zu</p>
 
       {ALL_ITEMS.map(function (item) {
         return (

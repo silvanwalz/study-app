@@ -64,10 +64,10 @@ export default function Welcome({ onContinue }) {
       <div className="bg-blue-50 rounded-lg p-5 mb-6">
         <p className="text-sm font-semibold text-blue-900 mb-2">Bevor du startest</p>
         <div className="space-y-1.5 text-sm text-blue-800">
-          <p>- Stelle sicher, dass dein <strong>Mikrofon aktiviert</strong> ist und funktioniert.</p>
-          <p>- Verwende am besten <strong>Kopfhörer</strong>, um Rückkopplungen zu vermeiden.</p>
-          <p>- Sorge für eine <strong>ruhige Umgebung</strong> ohne Hintergrundgeräusche.</p>
-          <p>- Sprich bitte auf <strong>Hochdeutsch</strong> (nicht Schweizerdeutsch).</p>
+          <p>• Stelle sicher, dass dein <strong>Mikrofon aktiviert</strong> ist und funktioniert.</p>
+          <p>• Verwende am besten <strong>Kopfhörer</strong>, um Rückkopplungen zu vermeiden.</p>
+          <p>• Sorge für eine <strong>ruhige Umgebung</strong> ohne Hintergrundgeräusche.</p>
+          <p>• Sprich bitte auf <strong>Hochdeutsch</strong> (nicht Schweizerdeutsch).</p>
         </div>
       </div>
 

@@ -1,22 +1,22 @@
 "use client";
 import { useState } from "react";
 
+// TPA Pöhler 2016, ohne Items 8 (Integrität) und 12 (Vertrautheit)
+// Begründung: Perrig et al. 2023 zeigen, dass Streichung dieser Items Reliabilität erhöht.
 var TPA_DISTRUST_ITEMS = [
-  { id: "TPA-1", text: "KI-Systeme sind täuschend." },
+  { id: "TPA-1", text: "KI-Systeme können täuschend sein." },
   { id: "TPA-2", text: "KI-Systeme verhalten sich hinterhältig." },
-  { id: "TPA-3", text: "Ich bin misstrauisch gegenüber den Absichten, Handlungen oder Ergebnissen von KI-Systemen." },
+  { id: "TPA-3", text: "Ich bin misstrauisch gegenüber den Absichten oder Ergebnissen von KI-Systemen." },
   { id: "TPA-4", text: "Ich bin vorsichtig im Umgang mit KI-Systemen." },
-  { id: "TPA-5", text: "Die Handlungen von KI-Systemen könnten schädliche Folgen haben." },
+  { id: "TPA-5", text: "KI-Systeme können schädliche oder negative Folgen haben." },
 ];
 
 var TPA_TRUST_ITEMS = [
   { id: "TPA-6", text: "Ich habe Zuversicht in KI-Systeme." },
   { id: "TPA-7", text: "KI-Systeme geben mir ein Gefühl von Sicherheit." },
-  { id: "TPA-8", text: "KI-Systeme handeln integer." },
   { id: "TPA-9", text: "KI-Systeme sind verlässlich." },
   { id: "TPA-10", text: "KI-Systeme sind zuverlässig." },
   { id: "TPA-11", text: "Ich kann KI-Systemen vertrauen." },
-  { id: "TPA-12", text: "KI-Systeme sind mir vertraut." },
 ];
 
 var ALL_TPA_ITEMS = TPA_DISTRUST_ITEMS.concat(TPA_TRUST_ITEMS);
@@ -140,7 +140,7 @@ export default function PreQuestionnaire({ onSubmit }) {
               value={demo.age}
               onChange={function (e) { setDemo(Object.assign({}, demo, { age: e.target.value })); }}
               className="border rounded px-3 py-2 w-full"
-              placeholder="18 - 29"
+              placeholder="18–29"
             />
           </div>
 
@@ -209,9 +209,9 @@ export default function PreQuestionnaire({ onSubmit }) {
                   className="border rounded px-3 py-2 w-full"
                 >
                   <option value="">Bitte wählen</option>
-                  <option value="1-2">1. - 2. Semester</option>
-                  <option value="3-4">3. - 4. Semester</option>
-                  <option value="5-6">5. - 6. Semester</option>
+                  <option value="1-2">1.–2. Semester</option>
+                  <option value="3-4">3.–4. Semester</option>
+                  <option value="5-6">5.–6. Semester</option>
                   <option value="7+">7. Semester oder höher</option>
                 </select>
               </div>

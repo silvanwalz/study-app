@@ -1,24 +1,21 @@
 "use client";
 import { useState } from "react";
 
-// TPA Post-Measurement: Same 12 items as baseline, two-factor model
-// Allows pre-post comparison of dispositional Trust and Distrust
+// TPA Post-Measurement: Same items as baseline (Pöhler 2016, ohne Items 8 und 12)
 const TPA_DISTRUST_ITEMS = [
-  { id: "TPA-POST-1", text: "KI-Systeme sind täuschend." },
+  { id: "TPA-POST-1", text: "KI-Systeme können täuschend sein." },
   { id: "TPA-POST-2", text: "KI-Systeme verhalten sich hinterhältig." },
-  { id: "TPA-POST-3", text: "Ich bin misstrauisch gegenüber den Absichten, Handlungen oder Ergebnissen von KI-Systemen." },
+  { id: "TPA-POST-3", text: "Ich bin misstrauisch gegenüber den Absichten oder Ergebnissen von KI-Systemen." },
   { id: "TPA-POST-4", text: "Ich bin vorsichtig im Umgang mit KI-Systemen." },
-  { id: "TPA-POST-5", text: "Die Handlungen von KI-Systemen könnten schädliche Folgen haben." },
+  { id: "TPA-POST-5", text: "KI-Systeme können schädliche oder negative Folgen haben." },
 ];
 
 const TPA_TRUST_ITEMS = [
   { id: "TPA-POST-6", text: "Ich habe Zuversicht in KI-Systeme." },
   { id: "TPA-POST-7", text: "KI-Systeme geben mir ein Gefühl von Sicherheit." },
-  { id: "TPA-POST-8", text: "KI-Systeme handeln integer." },
   { id: "TPA-POST-9", text: "KI-Systeme sind verlässlich." },
   { id: "TPA-POST-10", text: "KI-Systeme sind zuverlässig." },
   { id: "TPA-POST-11", text: "Ich kann KI-Systemen vertrauen." },
-  { id: "TPA-POST-12", text: "KI-Systeme sind mir vertraut." },
 ];
 
 const ALL_TPA_ITEMS = [...TPA_DISTRUST_ITEMS, ...TPA_TRUST_ITEMS];
